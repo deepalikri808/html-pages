@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 675px;
+            background-color: rgba(231, 86, 86, 0.696);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 38px;
+            margin: 20px 0 35px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 22px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        button {
+            width: 100%;
+            padding: 17px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color:blue;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .register-link a {
+            color: #79528f;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .login-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>Register</h1>
+        <form action="#" method="post">
+
+            <label for="Name"> <span style="color: red;">*</span>Name:</label>
+            <input
+                type="text"
+                id="Name"
+                name="Name"
+                required
+            >
+
+            <label for="Email"> <span style="color: red;">*</span>Email:</label>
+            <input
+                type="Email"
+                id="Email"
+                name="Email"
+                required
+            >
+
+            <label for="Mobile no."> <span style="color: red;">*</span>Mobile no.:</label>
+            <input
+                type="Mobile no."
+                id="Mobile no."
+                name="Mobile no."
+                required
+            >
+
+            <label for="Password"> <span style="color: red;">*</span>Password:</label>
+            <input
+                type="password"
+                id="Password"
+                name="Password"
+                required
+            >
+
+            <label for="Confirm password"> <span style="color: red;">*</span>Confirm Password:</label>
+            <input
+                type="Confirm password"
+                id=" Confirm Password"
+                name=" Confirm Password"
+                required
+            >
+
+            <button type="Register">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

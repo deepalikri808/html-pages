@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial;
+        }
+
+        h2 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        table {
+            width: 95%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dbeafe;
+        }
+
+        tr:hover {
+            background-color: rgb(233, 221, 220);
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Details</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Branch</th>
+            <th>Mobile No.</th>
+            <th>Email</th>
+            <th>Semester</th>
+            <th>Address</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+
+    <tbody id="studentData">
+    </tbody>
+</table>
+
+<script>
+    let students = [
+        ["Deepali", 101, "CSE", "9123456798",
+         "deepalikri@gmail.com", 4, "Manpur", 85],
+
+        ["Sneha", 102, "CSE", "9123456790",
+         "snehakri@gmail.com", 5, "Manpur", 95],
+
+        ["Shweta", 103, "CSE", "9123456778",
+         "shwetakri@gmail.com", 4, "Bhagalpur", 85],
+
+        ["Nishika", 104, "EE", "9123456798",
+         "nishikakri@gmail.com", 5, "Aurangabad", 75],
+
+        ["Neha", 105, "Civil", "9123456998",
+         "nehakri@gmail.com", 6, "Gaya", 95],
+
+         ["shivani", 105, "Civil", "9123456998",
+         "nehakri@gmail.com", 6, "Gaya", 95]
+    ];
+
+    let tableBody = document.getElementById("studentData");
+
+    students.forEach(rowData => {
+const tr = document.createElement("tr");
+ rowData.forEach(cellData => {
+                // Create a <td> element
+                const td = document.createElement("td");
+                // Safely set the text content to prevent XSS attacks
+                td.textContent = cellData; 
+                // Append the cell to the row
+                tr.appendChild(td);
+            });
+             tableBody.appendChild(tr);
+    });
+
+   
+</script>
+
+</body>
+</html>
